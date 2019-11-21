@@ -1,0 +1,16 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+ }
+
+ h1 a, h2 a {
+    color: #C25100;
+}
+
+
+ p.solid {border-style: solid;}

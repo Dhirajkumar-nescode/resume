@@ -1,0 +1,40 @@
+
+<form method="POST" enctype="multipart/form-data" action="">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    
+    <!-- Title -->
+    <div class="field_wrapper">
+      {{ form.title.errors }}
+      <label for="{{ form.title.id_for_label }}">Title:</label>
+      {{ form.title }}
+    </div>
+    <!-- Title end -->
+
+    <!-- dop -->
+    <div class="field_wrapper">
+        {{ form.dop.errors }}
+        <label for="{{ form.dop.id_for_label }}">dop:</label>
+        {{ form.dop }}
+      </div>
+      <!-- dop end -->
+
+    <!-- Description -->
+    <div class="field_wrapper">
+      {{ form.description.errors }}
+      <label for="{{ form.description.id_for_label }}">Description:</label>
+      {{ form.description }}
+    </div>
+    <!-- Description end -->
+
+    <!-- hobbies -->
+    <div class="field_wrapper">
+        {{ form.hobbies.errors }}
+        <label for="{{ form.hobbies.id_for_label }}">hobbies:</label>
+        {{ form.hobbies }}
+      </div>
+      <!-- hobbies end -->
+    
+    <button type="submit" class="save btn btn-info">Save</button>
+
+  </form>

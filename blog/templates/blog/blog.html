@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+<!-- This code will be visible in the browser -->
+{% block content %}
+<style>
+        h2 {
+            color: blueviolet;
+            
+          }
+          h2 {
+            font-family: "cursive", Times, serif;
+          }
+          
+          
+</style>
+<div>
+<h2 >Name:</h2> <h3>{{ blog.title }}</h3>
+<h2>dop:</h2>
+<h3>{{ blog.dop }}</h3>
+<h2>Degree:</h2>
+<h3>{{ blog.description }}</h3>
+<h2>Hobbies:</h2>
+<h3>{{ blog.hobbies }}</h3>
+
+</div>
+{% endblock %}

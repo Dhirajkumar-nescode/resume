@@ -1,28 +1,44 @@
 {% extends 'blog/base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 
 <!-- This code will be visible in the browser -->
 {% block content %}
-<style>
-        h2 {
-            color: blueviolet;
-            
-          }
-          h2 {
-            font-family: "cursive", Times, serif;
-          }
-          
-          
-</style>
-<div>
-<h2 >Name:</h2> <h3>{{ blog.title }}</h3>
-<h2>dop:</h2>
-<h3>{{ blog.dop }}</h3>
-<h2>Degree:</h2>
-<h3>{{ blog.description }}</h3>
-<h2>Hobbies:</h2>
-<h3>{{ blog.hobbies }}</h3>
+<h1 align="center" style="text-decoration: underline;"> CURRICULUM VITAE</h1>
 
-</div>
+<div class="container">
+<h4 style="font-weight: bold;">Name   &nbsp   &nbsp   &nbsp &nbsp  :{{ blog.title }}</h4>
+<h4>Mobile No : {{ blog.mobileno }}</h4>
+<h4>Email &nbsp   &nbsp   &nbsp  &nbsp:{{ blog.email }}</h4>
+<h4>Place &nbsp   &nbsp   &nbsp &nbsp  :{{ blog.place }}</h4>
+
+<p align="left" style="background-color:powderblue;"> <b>Professional Training</b></p>
+<h4><ul>•{{ blog.course }} in organization {{ blog.organization }}</ul></h4>
+
+<p align="left" style="background-color:powderblue;"><b> Programming skills</b></p>
+<h4><ul>• {{ blog.programmingskills }} </ul></h4>
+
+
+<p align="left" style="background-color:powderblue;"> <b>Hobbies</b></p>
+<h4><ul>• {{ blog.hobbies }} </ul></h4>
+
+
+<p align="left" style="background-color:powderblue;" ><b> Personal details</b></p>
+<h4>Father's name &nbsp &nbsp &nbsp: {{blog.fname}}</h4>
+<h4>Mother's name &nbsp &nbsp : {{blog.mname}}</h4>
+<h4>Date of birth &nbsp &nbsp &nbsp &nbsp : {{blog.dob}}</h4>
+<h4>Gender &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp:      {{blog.gender}}</h4>
+<h4>Langauge Known : {{blog.language}}</h4>
+<h4>Marital status &nbsp &nbsp &nbsp &nbsp: {{blog.marital}}</h4>
+<h4>Permanent Status&nbsp: {{blog.address}}</h4>
+<br/>
+<h4 align="left">Date:</h4> 
+<h4 align="right">Signature:</h4>
+
+
+<!-- <h2 class="topcorner">Images:</h2>
+{% load staticfiles %}
+    <img src="{% static 'blog/default.jpg' %}" alt="My image"/>
+</div> -->
 {% endblock %}

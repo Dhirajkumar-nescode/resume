@@ -1,40 +1,159 @@
+{% load crispy_forms_tags %}
+{% load static %}
+<html>
+<head>
+    <h1 align="center">Resume Builer App </h1>
 
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <title>Resume App</title>
+  <link rel="stylesheet" href="{% static 'css/resume.css' %}">
+</head>
+<div class='container'>
 <form method="POST" enctype="multipart/form-data" action="">
     {% csrf_token %}
     {{ form.non_field_errors }}
     
     <!-- Title -->
-    <div class="field_wrapper">
+    <div class="form-group">
       {{ form.title.errors }}
-      <label for="{{ form.title.id_for_label }}">Title:</label>
+      <label for="{{ form.title.id_for_label}}" ">Title:</label>
       {{ form.title }}
     </div>
     <!-- Title end -->
 
-    <!-- dop -->
-    <div class="field_wrapper">
-        {{ form.dop.errors }}
-        <label for="{{ form.dop.id_for_label }}">dop:</label>
-        {{ form.dop }}
-      </div>
-      <!-- dop end -->
+    <!-- mobile no -->
+    <div class="form-group">
+        {{ form.mobileno.errors }}
+        <label for="{{ form.mobileno.id_for_label }}" >Mobile no:</label>
 
-    <!-- Description -->
-    <div class="field_wrapper">
-      {{ form.description.errors }}
-      <label for="{{ form.description.id_for_label }}">Description:</label>
-      {{ form.description }}
+        {{ form.mobileno }}
+      </div>
+      <!-- mobile no -->
+
+    <!-- email -->
+    <div class="form-group">
+      {{ form.email.errors }}
+      <label for="{{ form.email.id_for_label }}">Email id</label>
+      {{ form.email }}
     </div>
     <!-- Description end -->
 
     <!-- hobbies -->
-    <div class="field_wrapper">
-        {{ form.hobbies.errors }}
-        <label for="{{ form.hobbies.id_for_label }}">hobbies:</label>
-        {{ form.hobbies }}
+    <div class="form-group">
+        {{ form.place.errors }}
+        <label for="{{ form.hobbies.id_for_label }}">Place:</label>
+        {{ form.place }}
       </div>
       <!-- hobbies end -->
+
+      <!-- course -->
+    <div class="form-group">
+      {{ form.course.errors }}
+      <label for="{{ form.hobbies.id_for_label }}">Course</label>
+      {{ form.course }}
+    </div>
+    <!-- course end -->
+
+    <!-- organization -->
+    <div class="form-group">
+      {{ form.organization.errors }}
+      <label for="{{ form.organization.id_for_label }}">Organization</label>
+      {{ form.organization }}
+    </div>
+   <!-- organization end -->
+
+   <!-- software skills -->
+   <div class="form-group">
+    {{ form.softwareskills.errors }}
+    <label for="{{ form.organization.id_for_label }}">Software skills</label>
+    {{ form.softwareskills }}
+  </div>
+ <!-- software skills -->
+
+ <!-- programmingskills  -->
+ <div class="form-group">
+  {{ form.programmingskills.errors }}
+  <label for="{{ form.programmingskills.id_for_label }}">Programming skills</label>
+  {{ form.programmingskills }}
+</div>
+<!-- programmingskills -->
+
+<!-- hobbies  -->
+<div class="form-group">
+  {{ form.hobbies.errors }}
+  <label for="{{ form.hobbies.id_for_label }}">Hobbies</label>
+  {{ form.hobbies }}
+</div>
+<!-- hobbies end -->
+
+<!-- fname  -->
+<div class="form-group">
+  {{ form.fname.errors }}
+  <label for="{{ form.fname.id_for_label }}">Father name</label>
+  {{ form.fname }}
+</div>
+<!-- programmingskills -->
+
+<!-- mname  -->
+<div class="form-group">
+  {{ form.mname.errors }}
+  <label for="{{ form.mname.id_for_label }}">Mother name</label>
+  {{ form.mname }}
+</div>
+<!-- mname end -->
+
+<!-- dob  -->
+<div class="form-group">
+  {{ form.dob.errors }}
+  <label for="{{ form.dob.id_for_label }}">Date of birth</label>
+  {{ form.dob }}
+</div>
+<!-- dob end -->
+
+<!-- gender  -->
+<div class="form-group">
+  {{ form.gender.errors }}
+  <label for="{{ form.gender.id_for_label }}">Gender</label>
+  {{ form.gender }}
+</div>
+<!-- gender end -->
+
+<!-- language  -->
+<div class="form-group">
+  {{ form.language.errors }}
+  <label for="{{ form.language.id_for_label }}">Language</label>
+  {{ form.language }}
+</div>
+<!-- langugage end -->
+
+<!-- marital  -->
+<div class="form-group">
+  {{ form.marital.errors }}
+  <label for="{{ form.marital.id_for_label }}">Marital</label>
+  {{ form.marital }}
+</div>
+<!-- marital end -->
+
+<!-- address  -->
+<div class="form-group">
+  {{ form.address.errors }}
+  <label for="{{ form.address.id_for_label }}">Address</label>
+  {{ form.address }}
+</div>
+<!-- address end -->
+
     
-    <button type="submit" class="save btn btn-info">Save</button>
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </div>
 
   </form>
+  </html>
